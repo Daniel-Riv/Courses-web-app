@@ -8,6 +8,8 @@ const methodOveriide = require('method-override');
 const session = require('express-session');
 const flash = require('connect-flash');
 const passport = require('passport');
+
+
 //inicialixacion
 const app = express();
 require('./database');
@@ -50,6 +52,8 @@ app.use((req,res, next) => {
 app.use(require('./routes/index'));
 app.use(require('./routes/cursos'));
 app.use(require('./routes/users'));
+app.use(require('./routes/file'));
+
 
 
 
