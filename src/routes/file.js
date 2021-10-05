@@ -17,7 +17,9 @@ router.get('/cursos/file',(req,res) =>{
 
 router.post('/cursos/file',upload.array('archivos'),(req,res)=>{
     console.log(req.file)
-    res.send('archivos se subieron correctamente')
+    req.flash('success_msg', 'Se cargo el archivo correctamente');
+        res.redirect('/cursos');
+   // res.send('archivos se subieron correctamente')
 })
 
 
